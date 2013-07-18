@@ -427,11 +427,15 @@
       },
 
       paused : function () {
-        if (($.inArray((settings.$li.index() + 1), settings.pauseAfter) === -1)) {
-          return true;
+	try {
+          if (($.inArray((settings.$li.index() + 1), settings.pauseAfter) === -1)) {
+            return true;
+          }
+	  return false;
+	}
+	catch(e) {
+          return false;
         }
-
-        return false;
       },
 
       destroy : function () {
