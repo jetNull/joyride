@@ -186,6 +186,7 @@
         content = $.trim($(opts.li).html()) +
           methods.button_text(opts.button_text) +
           settings.template.link +
+          settings.template.close +
           methods.timer_instance(opts.index);
 
         $wrapper = $(settings.template.wrapper);
